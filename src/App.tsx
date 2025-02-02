@@ -1,8 +1,6 @@
-import { useState, useEffect } from 'react'
 import './App.css';
-import { motion, MotionConfig, useScroll, useTransform } from 'motion/react'
+import { motion, MotionConfig, useScroll, useTransform, easeIn } from 'motion/react'
 import Hero from './components/Hero'
-import { easeIn } from 'motion';
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -83,25 +81,31 @@ function App() {
                     opacity: 1
                   }}
                   transition={{
-                    duration: 0.5,
+                    duration: 0.25,
                     delay: 0.5
                   }}
                 >
                   Weather app that utilises data from Open-Meteo and OpenWeather APIs.
-                  Weather data is presented as hourly and daily, with a menu in the top left for unit conversion.
-                  Background changes colour depending on the time of day.             
+                  Data is shown as hourly/daily. The menu in the top left allows for unit conversion.
+                  Background changes colour depending on the hour. 100% accessibility friendly.             
                   <br/>
                   <br/>
-                  Written in React and TypeScript.
+                  Requires location permission to work.
                 </motion.p>
 
                 <div className='projectDivButtonsDiv'> 
-                  <button className='projectLiveDemoButton'>
+                  <a 
+                    className='projectLiveDemoButton'
+                    href='https://weather-by-amir.netlify.app/'
+                  >
                     Live Demo
-                  </button>
-                  <button className='projectSourceCodeButton'>
+                  </a>
+                  <a 
+                    className='projectSourceCodeButton'
+                    href='https://github.com/BirdOfSteel/weather-app'
+                  >
                     Source Code
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -134,27 +138,28 @@ function App() {
                     opacity: 1
                   }}
                   transition={{
-                    duration: 0.5,
+                    duration: 0.25,
                     delay: 0.5
                   }}
                 >
                   Performs mostly simple calculations, but allows for roots and powers.
                   Uses 'if' statements to prevent certain symbols from being used consecutively.
-                  <br/>
-                  <br/>
-                  Dropdown menu at the top for a selection of styles.      
-                  <br/>
-                  <br/>
-                  Written in React.
+                  Dropdown menu at the top for a selection of styles.
                 </motion.p>
-                
+
                 <div className='projectDivButtonsDiv'> 
-                  <button className='projectLiveDemoButton'>
+                  <a 
+                    className='projectLiveDemoButton'
+                    href='https://calculator-app-amir.netlify.app/'
+                  >
                     Live Demo
-                  </button>
-                  <button className='projectSourceCodeButton'>
+                  </a>
+                  <a 
+                    className='projectSourceCodeButton'
+                    href='https://github.com/BirdOfSteel/calculator'
+                  >
                     Source Code
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -186,25 +191,28 @@ function App() {
                     opacity: 1
                   }}
                   transition={{
-                    duration: 0.5,
+                    duration: 0.25,
                     delay: 0.5
                   }}
                 >
                   One of my first projects! A simple trivia app that makes use of the the OpenTriviaDB API.
                   Works as you expect it would, but the start menu also lists a few dropdown menus to customise
                   gameplay options.
-                  <br/>
-                  <br/>
-                  Written in React.
                 </motion.p>
 
                 <div className='projectDivButtonsDiv'> 
-                  <button className='projectLiveDemoButton'>
+                  <a 
+                    className='projectLiveDemoButton'
+                    href='https://opentriviadb-api.netlify.app/'
+                  >
                     Live Demo
-                  </button>
-                  <button className='projectSourceCodeButton'>
+                  </a>
+                  <a 
+                    className='projectSourceCodeButton'
+                    href='https://github.com/BirdOfSteel/Trivia'
+                  >
                     Source Code
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>

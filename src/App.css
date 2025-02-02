@@ -36,7 +36,10 @@ html, body {
       display: flex;
       flex-direction: row;
       height: 100%;
+      position: relative;
+      width: max-content
     }
+
       #nameHeading {
         color: #747fe0;
         font-size: 5rem;
@@ -47,7 +50,9 @@ html, body {
 
       #nameHeadingTypeWriterBar {
         width: 1rem;
-        min-height: 100%;
+        height: 100%;
+        position: absolute;
+        right: -1.5rem;
         background: #747fe0;
         margin-left: 0.5rem;
       }
@@ -107,21 +112,25 @@ html, body {
         .terminalYellowText {
           color: #e7d184;
         } 
-      
-        .terminalTextDiv > div {
+
+          .blueTerminalText {
+            color: #35feff;
+            text-decoration: none;
+          }
+        
+        #terminalTypeWriterBarDiv {
           display: flex;
           flex-direction: row;
-          width: 100%;
-          height: 100%;
         }
 
-          #terminalTextDivTypeWriterBar {
+          #terminalTypeWriterBar {
             width: 0.6rem;
-            min-height: auto;
+            height: 1.2rem;
             background: rgba(255, 255, 255, 0.87);
             margin-left: 0.5rem;
           }
     
+
   #projectsDiv {
     display: flex;
     flex-direction: column;
@@ -144,11 +153,15 @@ html, body {
 
     .projectDiv {
       width: 100%;
-      height: 20rem;
+      height: 30rem;
       position: relative;
       margin-top: 4rem;
       border-radius: 15px;
       box-shadow: 0px 10px 20px grey;
+      padding: 1rem;
+      box-sizing: border-box;
+      font-size: clamp(17px, 2vw, 24px);
+      position: relative;
     }
 
       .projectImage {
@@ -166,6 +179,7 @@ html, body {
         width: 80%;
         height: 100%;
         position: absolute;
+        border-radius: 0 10px 10px 0;
       }
 
       .projectDescriptionDiv {
@@ -178,7 +192,8 @@ html, body {
         top: 0;
         right: 0;
         text-align: start;
-        padding: 3% 2.5% 0 0;
+        padding: 1rem;
+        box-sizing: border-box;
       }
         
         .projectDescriptionDiv > h1 {
@@ -192,17 +207,30 @@ html, body {
           width: 100%;
           display: flex;
           flex-direction: row;
+          justify-content: end;
+          position: absolute;
+          bottom: 1em;
         }
         
         .projectLiveDemoButton, .projectSourceCodeButton {
           border: 0;
           border-radius: 5px;
-          width: 7rem;
+          min-width: 120px;
+          width: max-content;
+          padding: 0.5rem 0.75rem;
           height: 2rem;
           font-family: inherit;
-          margin-top: 5%;
+          margin-top: 1rem;
           margin-right: 10%;
           font-weight: 500;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+        }
+        
+        .projectLiveDemoButton:visited {
+          color: #ffffff;
         }
 
           .projectLiveDemoButton {
@@ -215,3 +243,51 @@ html, body {
             color: #7795f8;
             border: 1px solid #7795f8;
           }
+
+@media (max-width: 720px) {
+    .projectDiv {
+      height: 500px;
+      display: flex;
+      z-index: 1;
+    }
+
+      .projectImageOverlay {
+        display: none;
+      }
+
+      .projectImage {
+        display: none;
+        /* position: absolute;
+        height: 100%;
+        top: 0;
+        right: -20%;
+        z-index: -2; */
+      }
+
+      .projectDescriptionDiv {
+        position: relative;
+        padding: 0.25rem;
+        width: 100%;
+        z-index: 1;
+        background: #f6f9fc;
+        justify-content: start;
+      }
+
+        .projectDivButtonsDiv {
+          position: relative;
+          bottom: 0;
+          width: 100%;
+          margin-top: auto;
+        }
+
+          .projectLiveDemoButton, .projectSourceCodeButton {
+            margin: 2% 0 0 0;
+          }
+
+          .projectLiveDemoButton {
+            margin-right: auto;
+          }
+
+          .projectSourceCodeButton {
+          }
+}

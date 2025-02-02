@@ -75,11 +75,44 @@ export default function HeroDiv() {
           </div>
           <div className='terminalTextDiv'>   
             <p className='terminalWhiteText'> {'>'} Amir.contactInfo</p>
-            <p className='terminalYellowText'>"LINK HERE IN BLUE"</p>
+            <p className='terminalYellowText'>
+              [
+                "
+                <a 
+                  className='blueTerminalText'
+                  href='mailto:amiraziz2001@gmail.com'
+                >
+                  AmirAziz2001@Gmail.com
+                </a>
+                ", 
+                "
+                <a 
+                  className='blueTerminalText'
+                  href='https://www.linkedin.com/in/dev-amir/'
+                >
+                  LinkedIn
+                </a>
+                ",
+                "
+                <a 
+                  className='blueTerminalText'
+                  href='https://github.com/BirdOfSteel?tab=repositories'
+                >
+                  GitHub
+                </a>
+                "
+              ]
+            </p>
           </div>
           <div className='terminalTextDiv'>
             <p className='terminalWhiteText'> {'>'} Amir.cv</p>
-            <p className='terminalYellowText'>"LINK HERE IN BLUE"</p>
+            <p className='terminalYellowText'>
+              "
+                <a className='blueTerminalText'>
+                  amir-aziz.pdf
+                </a>
+              "
+            </p>
           </div>
           <div className='terminalTextDiv'>
             <p className='terminalWhiteText'> {'>'} Amir.interests</p>
@@ -91,13 +124,18 @@ export default function HeroDiv() {
           </div>          
           <div className='terminalTextDiv'>
             <p className='terminalWhiteText'> {'>'} Amir.skills</p>
-
-            <div>
-              <p className='terminalYellowText'>["HTML & CSS", "JavaScript", "React", "TypeScript", "git"]</p>
-              { isTypeWriterBarVisible &&
-                <div id="terminalTextDivTypeWriterBar"/>
-              }
-            </div>
+            <p className='terminalYellowText'>
+              ["HTML & CSS", "JavaScript", "React", "TypeScript", "git"]
+            </p>
+          </div>
+          <div className='terminalTextDiv' id="terminalTypeWriterBarDiv">
+            <p>{'>'} </p>
+            <div 
+              id="terminalTypeWriterBar"
+              style={{
+                visibility: isTypeWriterBarVisible ? 'visible' : 'hidden'
+              }}  
+            />
           </div>
         </div>
       </div>
