@@ -108,8 +108,13 @@ export default function HeroDiv() {
             <p className='terminalWhiteText'> {'>'} Amir.cv</p>
             <p className='terminalYellowText'>
               "
-                <a className='blueTerminalText'>
-                  amir-aziz.pdf
+                <a 
+                  className='blueTerminalText' 
+                  href="/amir-aziz-cv.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  amir-aziz-cv.pdf
                 </a>
               "
             </p>
