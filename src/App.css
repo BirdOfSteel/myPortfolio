@@ -105,18 +105,14 @@ html, body {
         text-align: start;
       }
 
-        /* .terminalWhiteText, .terminalYellowText {} */
-        
-        /* .terminalWhiteText {} */
-
         .terminalYellowText {
           color: #e7d184;
         } 
 
-          .blueTerminalText {
-            color: #35feff;
-            text-decoration: none;
-          }
+        .blueTerminalText {
+          color: #35feff;
+          text-decoration: none;
+        }
         
         #terminalTypeWriterBarDiv {
           display: flex;

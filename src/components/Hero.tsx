@@ -88,25 +88,24 @@ export default function HeroDiv() {
                 "
                 <a 
                   className='blueTerminalText'
-                  href='https://www.linkedin.com/in/dev-amir/'
-                >
-                  LinkedIn
+                  href='https://github.com/BirdOfSteel?tab=repositories'
+                  >
+                  GitHub
                 </a>
                 ",
                 "
-                <a 
-                  className='blueTerminalText'
-                  href='https://github.com/BirdOfSteel?tab=repositories'
+                <span 
+                  className='terminalYellowText'
                 >
-                  GitHub
-                </a>
+                  07926 481016
+                </span>
                 "
               ]
             </p>
           </div>
           <div className='terminalTextDiv'>
             <p className='terminalWhiteText'> {'>'} Amir.interests</p>
-            <p className='terminalYellowText'>["design, cooking, gaming"]</p>
+            <p className='terminalYellowText'>["cooking, plants, gaming"]</p>
           </div>       
           <div className='terminalTextDiv'>
             <p className='terminalWhiteText'> {'>'} Education</p>
