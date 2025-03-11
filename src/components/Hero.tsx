@@ -105,21 +105,6 @@ export default function HeroDiv() {
             </p>
           </div>
           <div className='terminalTextDiv'>
-            <p className='terminalWhiteText'> {'>'} Amir.cv</p>
-            <p className='terminalYellowText'>
-              "
-                <a 
-                  className='blueTerminalText' 
-                  href="/amir-aziz-cv.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  amir-aziz-cv.pdf
-                </a>
-              "
-            </p>
-          </div>
-          <div className='terminalTextDiv'>
             <p className='terminalWhiteText'> {'>'} Amir.interests</p>
             <p className='terminalYellowText'>["design, cooking, gaming"]</p>
           </div>       
